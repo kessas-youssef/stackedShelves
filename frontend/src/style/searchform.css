@@ -1,0 +1,11 @@
+.searchForm {
+  width: 20em;
+  height: 3em;
+  padding: 10px 10px;
+  border: 3px solid rgba(64, 59, 59, 0.562);
+  border-radius: 5px;
+  outline: none;
+}
+.searchForm:focus{
+  border: 3px solid rgb(64, 59, 59);
+}

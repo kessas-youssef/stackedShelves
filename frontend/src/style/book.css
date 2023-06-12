@@ -1,0 +1,122 @@
+.searchArea {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+
+.container {
+    width: 90%;
+    max-width: 120rem;
+    height: 100%;
+    margin: 0 auto;
+    position: relative;
+    display: -ms-grid;
+    display: grid;
+    grid-gap: 2rem;
+    -ms-grid-columns: (1fr)4;
+    grid-template-columns: repeat(4, 1fr);
+    text-align: center;
+}
+
+.custom-card {
+    background-color: rgba(139, 134, 134, 0.842);
+    padding: 1rem;
+    border-radius: 1rem;
+}
+
+.load-more {
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content;
+    display: -ms-grid;
+    display: grid;
+    place-items: center;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 50px;
+}
+
+.load-more button {
+    padding: 0.7rem 1.4rem 0.7rem 1.4rem;
+    background-color: white;
+    border: 1px solid #353434;
+    color: black;
+    border-radius: 0.4rem;
+    cursor: pointer;
+    -webkit-transition: 0.5s ease-in-out;
+    transition: 0.5s ease-in-out;
+}
+
+.load-more button:hover {
+    background-color: #353434;
+    color: white;
+    -webkit-animation: hover .5s ease-in-out;
+    animation: hover .5s ease-in-out;
+}
+
+
+.loading-card span {
+    font-weight: bold;
+    color: #3B3B3B;
+}
+
+
+
+@media screen and (max-width: 600px) {
+    .container {
+        -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    }
+
+    .loading-name {
+        width: 90%;
+        font-size: 1rem;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .container {
+        -ms-grid-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+        -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .container {
+        -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    }
+}
+
+@-webkit-keyframes hover {
+    from {
+        background-color: white;
+        color: black;
+    }
+
+    to {
+        background-color: #353434;
+        color: white;
+    }
+}
+
+@keyframes hover {
+    from {
+        background-color: white;
+        color: black;
+    }
+
+    to {
+        background-color: #353434;
+        color: white;
+    }
+}

@@ -1,0 +1,21 @@
+.notification, .notification--modal {
+    width: 100%;
+    min-height: 20px;
+    color: white;
+    text-shadow: 1px 1px 10px black, -1px -1px 5px black;
+    /* text-shadow: 1px 1px 10px black, -1px -1px 5px #54b96e; */
+    text-align: center;
+    font-weight: bold;
+    padding: 5px auto;
+    top: 0;
+    z-index: 20;
+}
+
+.notification {
+    position: sticky;
+    
+}
+
+.notification--modal {
+    position: absolute;
+}

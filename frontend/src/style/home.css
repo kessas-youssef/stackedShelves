@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Serif&display=swap');
+
+.slogan {
+    text-align: center;
+    padding-block: 2em;
+    padding-inline: 20vw;
+    padding-bottom: 20vw;
+    font-size: var(--font-size);
+    background-image: url('../img/bookShelf_blurOut.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-weight: bold;
+    color: white; 
+    text-shadow: 1px 1px 10px black, -1px -1px 5px black;
+}
+
+.slogan__main *, .whyRead__title * {
+    display: inline;   
+    color: white;
+}
+
+.slogan__img, .aboutusCallToAction__img {
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+.slogan__hr {
+    width: 50%;
+    transform: translateX(50%);
+}
+
+.signinCallToAction, .aboutusCallToAction__textSection, .whyRead__content {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 5vw;
+    background-color: var(--color-primary);
+    text-align: center;
+    position: relative;
+    padding-inline: 2vw;
+    padding-block: 10vw;
+    font-size: var(--font-size);
+    color: white;
+}
+
+
+.signinCallToAction *, .aboutusCallToAction * {
+    font-family: 'PT Serif', serif;
+}
+
+.signinCallToAction > * {
+    max-width: 50%;
+}
+
+.signinCallToAction__icon {
+    color: aliceblue;
+    font-size: 10vw;
+}
+.signinCallToAction__text {
+    margin-inline: 1vw;
+    line-height: 4ch;
+}
+
+.signinCallToAction__text:nth-child(2) {
+    margin-block: 1em;
+}
+
+.signinCallToAction__btn, .aboutusCallToAction__btn{
+    background-color: var(--color-secondary);
+    padding-inline: 1em;
+    padding-block: .5em;   
+    display: inline;
+}
+.signinCallToAction__btn > a, .aboutusCallToAction__btn > a {
+    color: white;
+    text-decoration: none;
+}
+
+.signinCallToAction__btn:hover:active > a, .aboutusCallToAction__btn:hover:active > a{
+    color: gray
+}
+
+.aboutusCallToAction {
+    background-image: url('../img/stacked_books_shape_of_circle_copy.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-block: 20vw;
+}
+
+.aboutusCallToAction__textSection {
+    max-width: 70%;
+    margin: 0 auto;
+    padding-block: 5%;
+}
+
+.whyRead__element, .whyRead {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    gap: 2vw;
+}
+
+.whyRead {
+    background-color: var(--color-primary);
+    color: white;
+    padding-block: 1em;
+    font-size: var(--font-size);
+}
+
+.whyRead__content {
+    padding: 0;
+    margin-block: 3em ;
+    align-items: flex-start;
+}
+
+.whyRead__text {
+    max-width: 15ch;
+}
+
+@media (max-width: 650px) {
+    .header__logoName {
+        display: none;
+    }
+    .signinCallToAction__text {
+        margin: 3vw;
+    }
+    .signinCallToAction, .aboutusCallToAction__textSection, .whyRead__content {
+        padding-inline:0;
+    }
+}

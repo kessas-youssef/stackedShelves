@@ -1,0 +1,63 @@
+.filterArea {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    width: 90%;
+    margin: 1em auto;
+}
+
+.filterArea>* {
+    display: inline;
+}
+
+.filterArea__btn, .commentBtn {
+    border: none;
+    border-radius: 5px;
+    background-color: var(--color-secondary);
+    padding: 1em 2em;
+    color: white;
+    font-weight: bold;
+    margin: 10px;
+    cursor: pointer;
+}
+
+.filterArea__label {
+    font-size: 1rem;
+    margin: 1rem;
+    font-weight: 600;
+}
+
+.filterArea__box {
+    width: 10em;
+    height: 3em;
+    padding: 10px 10px;
+    border: 3px solid rgba(64, 59, 59, 0.562);
+    border-radius: 5px;
+    outline: none;
+}
+
+.filterArea__box:focus {
+    border: 3px solid rgb(64, 59, 59);
+}
+
+.loading-name {
+    background: white;
+    border-radius: 1rem;
+    color: #DB4437;
+    padding: 1rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    font-size: 33;
+    font-family: 'Inria' Serif;
+    transform: translate(-50%, -50%);
+    text-transform: capitalize;
+}
+
+.searchValue {
+    text-transform: capitalize;
+    color: black;
+    font-size: 40;
+    margin-top: 10;
+    font-family: "Scheherazade New";
+}

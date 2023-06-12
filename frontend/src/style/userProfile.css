@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Oldenburg&display=swap');
+
+.userProfile {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    background: rgb(128, 120, 57);
+    background: linear-gradient(90deg, rgba(128, 120, 57, 1) 0%, rgba(228, 166, 80, 1) 46%, rgba(209, 226, 213, 1) 100%);
+
+    min-height: 6em;
+    
+}
+.userProfile * {
+    font-family: 'Oldenburg', cursive;
+}
+
+.userProfile__name {
+    font-size: 2vw;
+}
+
+.userProfile__deleteBtn {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 10em;
+    height: 3em;
+}
+
+.userProfile__deleteBtn > * {
+    width: 45%;
+    height: 100%;
+    border: none;
+    border-radius: 10px;
+}
+
+.userProfile__deleteBtnOk {
+    font-weight: bold;
+    background-color: green;
+}
+
+.userProfile__deleteBtnNo {
+    font-weight: bold;
+    background-color: red;
+}

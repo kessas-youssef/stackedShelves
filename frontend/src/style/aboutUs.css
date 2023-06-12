@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@1,700&display=swap');
+
+.aboutus__backgroundImg {
+    width: 100%;
+}
+
+.aboutus__intro {
+    font-family: 'PT Serif', serif;
+    margin-top: -10px;
+    background-color: var(--color-primary);
+    padding: 5vw;
+    text-align: left;
+    color: rgb(243, 237, 226);
+    font-size: 2em;
+    line-height: 1.3em;
+}
