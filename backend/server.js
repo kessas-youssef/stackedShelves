@@ -32,7 +32,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(
   cors({
-    origin: "https://meek-sawine-05f4b2.netlify.app", // <-- location of the react app were connecting to
+    origin: "http://localhost:3000", // <-- location of the react app were connecting to
     credentials: true,
   })
 );
@@ -42,7 +42,7 @@ app.use(
     resave: true,
     saveUninitialized: true,
     cookie: {
-      secure: true, // Set to true if using HTTPS
+      secure: false, // Set to true if using HTTPS
       maxAge: 30 * 24 * 60 * 60 * 1000, // 30 days (example)
     }
   })
@@ -51,19 +51,6 @@ app.use(cookieParser(process.env.SECRET));
 app.use(passport.initialize());
 app.use(passport.session());
 require("./passportConfig")(passport);
-
-// Custom middleware to set CORS headers
-app.use((req, res, next) => {
-  const mainUrl = 'https://meek-sawine-05f4b2.netlify.app';
-  const allowedOrigins = [mainUrl,mainUrl+'/auth',mainUrl+'/auth/login', mainUrl+'/auth/sigin', mainUrl+'/profile', mainUrl+'/home', mainUrl+'/books', mainUrl+'/about'];
-
-  // Check if the request origin matches any of the allowed origins
-  if (allowedOrigins.includes(req.headers.origin)) {
-    res.setHeader('Access-Control-Allow-Origin', req.headers.origin);
-  }
-  res.setHeader('Access-Control-Allow-Credentials', 'true');
-  next();
-});
 
 //----------------------------------------- END OF MIDDLEWARE---------------------------------------------------
 
