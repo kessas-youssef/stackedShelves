@@ -24,7 +24,7 @@ const UserProfile = () => {
           username: ctx.name
         },
         withCredentials: true,
-        url: 'https://stackedshelves.onrender.com/deleteAccount'
+        url: 'http://localhost:4000/deleteAccount'
       }
     );
 

@@ -42,7 +42,7 @@ export const getComments = async (bookId) => {
 
     return axios({
         method: 'GET',
-        url: `https://stackedshelves.onrender.com/getComments/${bookId}`
+        url: `http://localhost:4000/getComments/${bookId}`
     }).then(res => {
         return res.data;
     })
@@ -60,7 +60,7 @@ export const createComment = async (text, username, userId, bookId, parentId = n
             createdAt: new Date().toISOString()
         },
         withCredentials: true,
-        url: 'https://stackedshelves.onrender.com/addComment'
+        url: 'http://localhost:4000/addComment'
     }).then(res => {
         return res.data;
     });
@@ -74,7 +74,7 @@ export const updateComment = async (text, commentId) => {
             text: text
         },
         withCredentials: true,
-        url: `https://stackedshelves.onrender.com/updateComment/${commentId}`
+        url: `http://localhost:4000/updateComment/${commentId}`
     }).then(res => res.data);
 };
 
@@ -82,6 +82,6 @@ export const deleteComment = async (commentId) => {
     return axios({
         method: 'DELETE',
         withCredentials: true,
-        url: `https://stackedshelves.onrender.com/deleteComment/${commentId}`
+        url: `http://localhost:4000/deleteComment/${commentId}`
     }).then(res => res.data)
 };

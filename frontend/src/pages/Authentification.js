@@ -45,7 +45,7 @@ const Authentification = () => {
         password: password,
       },
       withCredentials: true,
-      url: `https://stackedshelves.onrender.com/${isLogin ? 'login' : 'signin'}`
+      url: `http://localhost:4000/${isLogin ? 'login' : 'signin'}`
     })
     if (res.data.status) {
       ctx.login(res.data.userData);

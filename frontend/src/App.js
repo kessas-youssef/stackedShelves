@@ -24,7 +24,7 @@ const App = () => {
     const res = await axios({
       method: 'GET',
       withCredentials: true,
-      url: 'https://stackedshelves.onrender.com/checkAuth'
+      url: 'http://localhost:4000/checkAuth'
     }
     );
     if (res.data.status) {
