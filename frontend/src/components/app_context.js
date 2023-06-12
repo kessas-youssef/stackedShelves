@@ -11,7 +11,9 @@ const Context = createContext({
     setNotifHandler: () => { },
     isNotif: false,
     notification: { text: '', status: false },
-    setUserBooksHandler: () => {}
+    setUserBooksHandler: () => { },
+    isModal: false,
+    setIsModalHandler: () => { }
 });
 
 
@@ -23,6 +25,7 @@ export const MyContext = (props) => {
     const [userBooks, setUserBooks] = useState([]);
     const [isNotif, setIsNotif] = useState(false);
     const [notification, setNotification] = useState({ text: '', status: false });
+    const [isModal,setIsModal] = useState(false);
 
 
     const login = ({ _id, username, books }) => {
@@ -50,7 +53,9 @@ export const MyContext = (props) => {
                 setIsNotif(false);
             }, 4000);
     }
-    const setUserBooksHandler = books => setUserBooks([...books])
+    const setUserBooksHandler = books => setUserBooks([...books]);
+
+    const setIsModalHandler = (isModal) => setIsModal(isModal);
 
     return (
         <Context.Provider value={{
@@ -63,7 +68,9 @@ export const MyContext = (props) => {
             setNotifHandler: setNotifHandler,
             isNotif: isNotif,
             notification: { text: notification.text, status: notification.status },
-            setUserBooksHandler: setUserBooksHandler
+            setUserBooksHandler: setUserBooksHandler,
+            isModal: isModal,
+            setIsModalHandler:setIsModalHandler
         }}>
             {props.children}
         </Context.Provider >

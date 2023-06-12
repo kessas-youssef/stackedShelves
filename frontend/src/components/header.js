@@ -1,6 +1,6 @@
 import "../style/header.css";
 import logo from "../img/Stacked Shelves Noir.svg"
-import { NavLink, useNavigate } from "react-router-dom";
+import { Link, NavLink, useNavigate } from "react-router-dom";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { icon } from '@fortawesome/fontawesome-svg-core/import.macro'
 import { useContext, useState } from "react";
@@ -51,10 +51,10 @@ const Header = ({ activeBtn }) => {
   return (
     <>
       <header className="header">
-        <div className="header__logoContainer">
+        <Link to={'/'} className="header__logoContainer">
           <img className="header__logo" src={logo} alt="logo" />
           <h3 className="header__logoName">Stacked Shelves</h3>
-        </div>
+        </Link>
         <nav className="header__navBar">
           <NavLink to='/home' className={({ isActive }) => isActive ? 'header__navLink header__navLink--active' : 'header__navLink header__navLink'}>Home</NavLink>
           <NavLink to='/books' className={({ isActive }) => isActive ? 'header__navLink header__navLink--active' : 'header__navLink header__navLink'} >Books</NavLink>

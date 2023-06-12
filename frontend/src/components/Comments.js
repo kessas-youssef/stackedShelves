@@ -10,7 +10,7 @@ import {
 } from "../api";
 import Context from "./app_context";
 
-const Comments = ({bookId, bookTitle}) => {
+const Comments = ({ bookId, bookTitle, setIsLoading }) => {
     const ctx = useContext(Context);
 
     const [backendComments, setBackendComments] = useState([]);
@@ -70,19 +70,24 @@ const Comments = ({bookId, bookTitle}) => {
 
     };
 
+    const getCommentsHandler = async () => {
+        setIsLoading(true);
+        const res = await getCommentsApi(bookId)
+        if (res.status) {
+            setBackendComments(res.data);
+        }
+        ctx.setNotifHandler({ text: res.message, status: res.status })
+        setIsLoading(false);
+    }
+
     useEffect(() => {
-        getCommentsApi(bookId).then((res) => {
-            if (res.status) {
-                setBackendComments(res.data);
-            }
-            ctx.setNotifHandler({ text: res.message, status: res.status })
-        });
-    // eslint-disable-next-line react-hooks/exhaustive-deps
+        getCommentsHandler()
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
     return (
         <div className="comments">
-            <h3 className="comments-title">Comments on : "{bookTitle}"</h3>
+            <h3 className="comments-title">Comment on : "{bookTitle}"</h3>
             <CommentForm submitLabel="Comment" handleSubmit={addComment} />
             <div className="comments-container">
                 {rootComments.map((rootComment) => (

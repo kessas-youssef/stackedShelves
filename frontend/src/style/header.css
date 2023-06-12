@@ -10,6 +10,8 @@
 .header__logoContainer {
     display: flex;
     align-items: center;
+    color: #ffffff;
+    text-decoration: none;
 }
 
 .header__logo {

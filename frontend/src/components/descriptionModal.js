@@ -9,7 +9,7 @@ function DescriptionModal(props) {
 
     return (
 
-        <div className={props.status ? "overlay modal-active" : "overlay"} onClick={() => console.log("Clicked")}>
+        <div className={props.status ? "overlay modal-active" : "overlay"}>
             <div className="descriptionModal">
                 <div className="descriptionModal__close" onClick={
                     () => {

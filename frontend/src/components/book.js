@@ -29,7 +29,7 @@ const Book = ({ id, volumeInfo }) => {
 
   const bookStatusToogleHandler = async () => {
     setIsLoading(true);
-    const statusList = ['Unread', 'Read', 'Reading ...'];
+    const statusList = ['Unread', 'Done', 'Reading ...'];
     setBookStatusToggle(statusList.indexOf(bookStatus.bookStatus));
     const status = statusList[bookStatusToogle === 2 ? 0 : bookStatusToogle + 1];
     console.log(status);
@@ -87,6 +87,10 @@ const Book = ({ id, volumeInfo }) => {
     setBookStatus(ctx.userBooks.find(book => book.bookId === id));
   }, [ctx.userBooks, id])
 
+  useEffect(() => {
+    ctx.setIsModalHandler(descriptionModal.status || commentsModal);
+    },[commentsModal, ctx, descriptionModal.status])
+
   const imageVariants = {
     hover: {
       scale: 1.7,
@@ -129,7 +133,7 @@ const Book = ({ id, volumeInfo }) => {
           <div>
             {title && (
               <div>
-                <h3 className="inline" style={{ fontStyle: "italic" }}>{title}</h3>
+                <h3 className="inline" style={{ fontStyle: "italic", fontSize: `${title.length>40?'.7rem':'1rem'}` }}>{title}</h3>
               </div>
             )}
           </div>

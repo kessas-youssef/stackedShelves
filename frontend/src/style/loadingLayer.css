@@ -1,5 +1,5 @@
 .loadingLayer {
-  position: sticky;
+  position: fixed;
 }
 
 .loadingLayer--modal {
@@ -11,10 +11,9 @@
   align-items: center;
   z-index: 40;
   top: 0;
-  bottom: 0;
   left: 0;
-  right: 0;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
   background-color: rgba(255, 228, 196, 0.672);
 }
 
