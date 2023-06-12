@@ -32,7 +32,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(
   cors({
-    origin: "https://meek-sawine-05f4b2.netlify.app/", // <-- location of the react app were connecting to
+    origin: "https://meek-sawine-05f4b2.netlify.app", // <-- location of the react app were connecting to
     credentials: true,
   })
 );
@@ -42,7 +42,7 @@ app.use(
     resave: true,
     saveUninitialized: true,
     cookie: {
-      secure: false, // Set to true if using HTTPS
+      secure: true, // Set to true if using HTTPS
       maxAge: 30 * 24 * 60 * 60 * 1000, // 30 days (example)
     }
   })
