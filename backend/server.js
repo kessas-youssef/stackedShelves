@@ -54,8 +54,8 @@ require("./passportConfig")(passport);
 
 // Custom middleware to set CORS headers
 app.use((req, res, next) => {
-  const mainUrl = 'https://meek-sawine-05f4b2.netlify.app/';
-  const allowedOrigins = [mainUrl,mainUrl+'auth',mainUrl+'auth/login', mainUrl+'auth/sigin', mainUrl+'profile', mainUrl+'home', mainUrl+'books'];
+  const mainUrl = 'https://meek-sawine-05f4b2.netlify.app';
+  const allowedOrigins = [mainUrl,mainUrl+'/auth',mainUrl+'/auth/login', mainUrl+'/auth/sigin', mainUrl+'/profile', mainUrl+'/home', mainUrl+'/books', mainUrl+'/about'];
 
   // Check if the request origin matches any of the allowed origins
   if (allowedOrigins.includes(req.headers.origin)) {
