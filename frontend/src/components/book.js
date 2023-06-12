@@ -43,7 +43,7 @@ const Book = ({ id, volumeInfo }) => {
           bookStatus: status
         },
         withCredentials: true,
-        url: 'http://localhost:4000/changeStatus'
+        url: 'https://stackedshelves.onrender.com/changeStatus'
       }
     );
     if (res.data.status) {
@@ -66,7 +66,7 @@ const Book = ({ id, volumeInfo }) => {
           bookId: id
         },
         withCredentials: true,
-        url: `http://localhost:4000/${action}Favourite`
+        url: `https://stackedshelves.onrender.com/${action}Favourite`
       }
     );
     if (res.data.status) {

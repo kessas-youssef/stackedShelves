@@ -34,7 +34,7 @@ const Header = ({ activeBtn }) => {
         username: ctx.name,
       },
       withCredentials: true,
-      url: `http://localhost:4000/logout`
+      url: `https://stackedshelves.onrender.com/logout`
     })
 
     ctx.logout()
