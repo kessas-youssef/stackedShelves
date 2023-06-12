@@ -88,7 +88,7 @@ const Authentification = () => {
               <input type='password' id='validatePassword' placeholder='Please confirm your password' required onChange={(e) => setValidatedPass(e.target.value)} />
             </div>
           }
-          <button className='auth__submitBtn' style={{ opacity: `${allowClick ? '1' : '.3'}` }} disabled={!allowClick} onClick={onSubmitHandler} >{isLogin ? 'Login' : 'Create Account'}</button>
+          <button className='auth__submitBtn' type='submit' style={{ opacity: `${allowClick ? '1' : '.3'}` }} disabled={!allowClick} onClick={onSubmitHandler} >{isLogin ? 'Login' : 'Create Account'}</button>
 
           <Link
             to={`${isLogin ? 'signin' : 'login'}`}
