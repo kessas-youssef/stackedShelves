@@ -24,7 +24,7 @@ const UserProfile = () => {
           username: ctx.name
         },
         withCredentials: true,
-        url: 'https://stacked-shelves-hh7u2ufv7-kessas-youssef.vercel.app/deleteAccount'
+        url: 'https://stackedshelves.onrender.com/deleteAccount'
       }
     );
 

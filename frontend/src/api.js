@@ -42,7 +42,7 @@ export const getComments = async (bookId) => {
 
     return axios({
         method: 'GET',
-        url: `https://stacked-shelves-hh7u2ufv7-kessas-youssef.vercel.app/getComments/${bookId}`
+        url: `https://stackedshelves.onrender.com/getComments/${bookId}`
     }).then(res => {
         return res.data;
     })
@@ -60,7 +60,7 @@ export const createComment = async (text, username, userId, bookId, parentId = n
             createdAt: new Date().toISOString()
         },
         withCredentials: true,
-        url: 'https://stacked-shelves-hh7u2ufv7-kessas-youssef.vercel.app/addComment'
+        url: 'https://stackedshelves.onrender.com/addComment'
     }).then(res => {
         return res.data;
     });
@@ -74,7 +74,7 @@ export const updateComment = async (text, commentId) => {
             text: text
         },
         withCredentials: true,
-        url: `https://stacked-shelves-hh7u2ufv7-kessas-youssef.vercel.app/updateComment/${commentId}`
+        url: `https://stackedshelves.onrender.com/updateComment/${commentId}`
     }).then(res => res.data);
 };
 
@@ -82,6 +82,6 @@ export const deleteComment = async (commentId) => {
     return axios({
         method: 'DELETE',
         withCredentials: true,
-        url: `https://stacked-shelves-hh7u2ufv7-kessas-youssef.vercel.app/deleteComment/${commentId}`
+        url: `https://stackedshelves.onrender.com/deleteComment/${commentId}`
     }).then(res => res.data)
 };

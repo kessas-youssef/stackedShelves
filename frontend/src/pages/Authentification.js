@@ -45,7 +45,7 @@ const Authentification = () => {
         password: password,
       },
       withCredentials: true,
-      url: `https://stacked-shelves-hh7u2ufv7-kessas-youssef.vercel.app/${isLogin ? 'login' : 'signin'}`
+      url: `https://stackedshelves.onrender.com/${isLogin ? 'login' : 'signin'}`
     })
     if (res.data.status) {
       ctx.login(res.data.userData);
