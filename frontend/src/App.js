@@ -24,7 +24,7 @@ const App = () => {
     const res = await axios({
       method: 'GET',
       withCredentials: true,
-      url: 'http://localhost:4000/checkAuth'
+      url: 'https://stacked-shelves-hh7u2ufv7-kessas-youssef.vercel.app/checkAuth'
     }
     );
     if (res.data.status) {

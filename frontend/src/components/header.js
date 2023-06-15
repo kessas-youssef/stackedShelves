@@ -34,7 +34,7 @@ const Header = ({ activeBtn }) => {
         username: ctx.name,
       },
       withCredentials: true,
-      url: `http://localhost:4000/logout`
+      url: `https://stacked-shelves-hh7u2ufv7-kessas-youssef.vercel.app/logout`
     })
 
     ctx.logout()
